@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main() 
+{
+    FILE *file_ptr;  // declare a file pointer
+    int letter_count = 0;  // initialize the letter count to zero
+    char ch;  // declare a variable to store each character in the file
+    
+    // open the file for reading
+    file_ptr = fopen("github.txt", "r");
+    
+    // check if the file was opened successfully
+    if (file_ptr == NULL) {
+        printf("Error: Unable to open file!");
+        return 1;
+    }
+    
+    // loop through each character in the file
+    while ((ch = fgetc(file_ptr)) != EOF) {
+        if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z')) {
+            letter_count++;
+        }
+    }
+    
+    // close the file
+    fclose(file_ptr);
+    
+    // print the total number of letters in the file
+    printf("The file contains %d letters.", letter_count);
+    
+    return 0;
+}
