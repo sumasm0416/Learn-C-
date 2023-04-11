@@ -1,0 +1,11 @@
+#inlude<stdio.h>
+void main()
+{
+int num1,num2,num;
+printf("enter a number\n");
+scanf("%d",&num);
+num1=num*10;
+num2=num*20;
+printf("multiplication of %d with 10 is  %d \n",num,num1);
+printf("multiplication of %d with 20 is %d \n",num,num2);
+}
