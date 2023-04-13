@@ -1,0 +1,55 @@
+#using switch statement, count the frequency of individual digits in a number.
+
+#include <stdio.h>
+
+int main() {
+    int num, digit, freq[10] = {0};
+    
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    
+    while (num > 0) {
+        digit = num % 10;
+        freq[digit]++;
+        num /= 10;
+    }
+    
+    printf("Frequency of individual digits in the number:\n");
+    
+    for (int i = 0; i < 10; i++) {
+        switch (i) {
+            case 0:
+                printf("0 - %d\n", freq[i]);
+                break;
+            case 1:
+                printf("1 - %d\n", freq[i]);
+                break;
+            case 2:
+                printf("2 - %d\n", freq[i]);
+                break;
+            case 3:
+                printf("3 - %d\n", freq[i]);
+                break;
+            case 4:
+                printf("4 - %d\n", freq[i]);
+                break;
+            case 5:
+                printf("5 - %d\n", freq[i]);
+                break;
+            case 6:
+                printf("6 - %d\n", freq[i]);
+                break;
+            case 7:
+                printf("7 - %d\n", freq[i]);
+                break;
+            case 8:
+                printf("8 - %d\n", freq[i]);
+                break;
+            case 9:
+                printf("9 - %d\n", freq[i]);
+                break;
+        }
+    }
+    
+    return 0;
+}
